@@ -16,6 +16,5 @@ int main() {
     } else {
         printf("Fora do intervalo normal\n");
     }
-
     return 0;
 }
