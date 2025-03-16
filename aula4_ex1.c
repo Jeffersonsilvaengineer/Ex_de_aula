@@ -1,4 +1,5 @@
-//Crie um programa em C que recebe um valor de IMC e determina se o valor está no intervalo normal [18.5, 24.9]. A resposta deve ser "Intervalo normal" ou "Fora do intervalo normal".
+//Crie um programa em C que recebe um valor de IMC e determina se o valor está no intervalo normal [18.5, 24.9]. 
+//A resposta deve ser "Intervalo normal" ou "Fora do intervalo normal".
 
 #include <stdio.h>
 
