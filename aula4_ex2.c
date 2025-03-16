@@ -7,4 +7,6 @@
 //      [7,8[	      C
 //      [6,7[	      D
 //      [0,6[	      F
-
+simeia = 5
+if simeia < 10;
+printf("Simeia é muito linda!")
