@@ -5,15 +5,23 @@
 
 int main() {
     int a, b, c;
-    while (1) {
-        printf("Digite três valores (ou -1 para sair): ");
+
+        printf("Digite o primeiro lado (ou -1 para sair): ");
         scanf("%d", &a);
-        if (a == -1) break;
-        scanf("%d %d", &b, &c);
+    while (a != -1) {
+        printf("Digite o segundo lado: ");
+        scanf("%d", &b);
+
+        printf("Digite o terceiro lado: ");
+        scanf("%d", &c);
+
         if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a)
             printf("%d, %d, %d formam um triângulo retângulo.\n", a, b, c);
         else
             printf("%d, %d, %d NÃO formam um triângulo retângulo.\n", a, b, c);
+        
+        printf("Digite o primeiro lado (ou -1 para sair): ");
+        scanf("%d", &a);
     }
     return 0;
 }
