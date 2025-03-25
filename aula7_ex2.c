@@ -3,24 +3,24 @@
 
 int main(void) {
   char tamanho;
-
+  
   printf("Digite o tamanho recebido, F para encerrar:");
   scanf("%c", &tamanho);
 
-  int quantidadeP = 0;
-  int quantidadeM = 0;
-  int quantidadeG = 0;
+  int quantidade_P = 0;
+  int quantidade_M = 0;
+  int quantidade_G = 0;
 
   while( tamanho != 'F' ) {
     switch (tamanho) {
       case 'P':
-	quantidadeP++;
+	quantidade_P++;
 	break;
       case 'M': 
-	quantidadeM++;
+	quantidade_M++;
 	break;
       case 'G':
-	quantidadeG++;
+	quantidade_G++;
 	break;
     }
 
@@ -28,7 +28,7 @@ int main(void) {
     scanf("%c", &tamanho);
   }
 
-  printf("P: %d M: %d G: %d", quantidadeP, quantidadeM, quantidadeG);
+  printf("P: %d M: %d G: %d", quantidade_P, quantidade_M, quantidade_G);
   return 0;
 }
 
