@@ -31,3 +31,12 @@ int main(void) {
   printf("P: %d M: %d G: %d", quantidadeP, quantidadeM, quantidadeG);
   return 0;
 }
+
+
+//char letra;
+
+printf("Digite uma letra: ");
+
+letra = getchar();
+
+printf("Digitado: %c", letra);
