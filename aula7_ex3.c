@@ -7,32 +7,34 @@
 #include <stdio.h>
 
 int main(void) {
-  char tamanho;
+    char opcao;
+    int quantidadeSecar = 0;
+    int quantidadeEnxaguarSecar = 0;
+    int quantidadeLavarEnxaguarSecar = 0;
 
-  printf("Digite o tamanho recebido, F para encerrar:");
-  scanf("%c", &tamanho);
+    do {
+        printf("Escolha uma opção para a máquina de lavar roupas, F para encerrar:\n");
+        printf("S - Secar\n");
+        printf("E - Enxaguar e secar\n");
+        printf("L - Lavar, Enxaguar e Secar\n");
+        printf("Digite sua opção: ");
+        scanf(" %c", &opcao);
 
-  int quantidadeP = 0;
-  int quantidadeM = 0;
-  int quantidadeG = 0;
+        if (opcao == 'S' || opcao == 's') {
+            quantidadeSecar++;
+        } else if (opcao == 'E' || opcao == 'e') {
+            quantidadeEnxaguarSecar++;
+        } else if (opcao == 'L' || opcao == 'l') {
+            quantidadeLavarEnxaguarSecar++;
+        } else if (opcao != 'F' && opcao != 'f') {
+            printf("Opção inválida! Tente novamente.\n");
+        }
 
-  while( tamanho != 'F' ) {
-    switch (tamanho) {
-      case 'P':
-	quantidadeP++;
-	break;
-      case 'M': 
-	quantidadeM++;
-	break;
-      case 'G':
-	quantidadeG++;
-	break;
-    }
+    } while (opcao != 'F' && opcao != 'f');
+    printf("\nResumo das operações:\n");
+    printf("Secar: %d\n", quantidadeSecar);
+    printf("Enxaguar e Secar: %d\n", quantidadeEnxaguarSecar);
+    printf("Lavar, Enxaguar e Secar: %d\n", quantidadeLavarEnxaguarSecar);
 
-    printf("Digite o tamanho recebido, F para encerrar:");
-    scanf("%c", &tamanho);
-  }
-
-  printf("P: %d M: %d G: %d", quantidadeP, quantidadeM, quantidadeG);
-  return 0;
+    return 0;
 }

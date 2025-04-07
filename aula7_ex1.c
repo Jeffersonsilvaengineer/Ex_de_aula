@@ -3,14 +3,16 @@
 #include <stdio.h>
 
 int main() {
-    int fim = 10;
+    int fim = 0;
     int soma = 0;
 
+    printf("Digite um numero: ");
+    scanf("%d", &fim);
     for(int contador = 1; contador <= fim; contador++) {
-        if (contador %2 == 1)
-            soma++;
-        //printf("%d ", contador);
-        printf("%d ", soma);
-}
+        if (contador % 2 == 1) {
+            soma += contador;
+        }
+    } 
+    printf("A soma dos impares de 1 a %d é: %d\n", fim, soma);
     return 0;
 }

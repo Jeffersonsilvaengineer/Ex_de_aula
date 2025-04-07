@@ -5,16 +5,21 @@
 //5 é par? 0
 
 #include <stdio.h>
-int x = 0;
 
 int testa_par(int x) {
-  return x%2;
-}  
+    return x % 2 == 0;
+}
 
 int main(void) {
-  int resultado = testa_par(3);
-  if (rersultado == 0){
-    printf("%d é par? %d", x, resultado);
-  }
-  printf("Resultado: %d", resultado);
+    int numero;
+
+    for (int i = 1; i <= 4; i++) {
+        printf("Digite o número %d: ", i);
+        scanf("%d", &numero);
+
+        int resultado = testa_par(numero);
+        printf("%d é par? %d\n", numero, resultado);
+    }
+
+    return 0;
 }
